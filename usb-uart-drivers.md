@@ -21,7 +21,9 @@ then you will need a separate USB-UART converter, for instance like the one show
 
 ![USB-UART-CP2102](media/usb-uart-cp2102.jpg)
 
-Note: In this case there is a possibility that you get a module with yet another common USB-UART converter chip **_FT232RL_** manufactored by FTDI that will require yet another driver. Here is how it looks like. Notice that it has much more legs than the CH340G one:
+**_Please be careful here!!!_** ESP8266 chip must be powered by 3.3V. External USB-UART converters come in different configurations. They most commonly provide 3.3V or 5V. Some converters provide an option to switch between these voltages. Make sure that you use 3.3V before connecting to your ESP8266 module.
+
+You may get a converter with another common USB-UART chip **_FT232RL_** manufactored by FTDI that will require yet another driver. Here is how it looks like. Notice that it has much more legs than the CH340G one:
 
 ![USB-UART FT232RL](media/usb-uart-ft232rl.jpg)
 

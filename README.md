@@ -15,7 +15,7 @@ Get me to the Hello World as quick as possible -> [RUN](quick-start-helloworld.m
 ## Main Tools
 
 - [esptool.py](https://github.com/espressif/esptool)
-- [nodemcu-tool](https://github.com/AndiDittrich/NodeMCU-Tool)
+- [nodemcu-tool](nodemcu-tool.md)
 - [docker-nodemcu-build](https://github.com/marcelstoer/docker-nodemcu-build)
 - (optional) [nodemcu-build](https://nodemcu-build.com/)
 

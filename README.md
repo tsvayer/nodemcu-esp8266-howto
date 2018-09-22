@@ -6,6 +6,8 @@
 
 Get me to the Hello World as quick as possible -> [RUN](quick-start-helloworld.md)
 
+For something more interesting try [Wi-Fi Detector](examples/wifi_detector)
+
 ## Documentation
 
 [Official NodeMCU documentation](https://nodemcu.readthedocs.io/en/master/) is good and if you want to understand the details you should go and read it completely. This repository contains some distilled and often biased quick lookup information on the topic.

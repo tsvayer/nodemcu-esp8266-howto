@@ -27,6 +27,9 @@ $ esptool.py --port [device port name] write_flash -fm dio 0x0000 [firmware imag
 
 ```bash
 $ echo "print('hello world')" > ./hello.lua
-$ nodemcu-tool -p [device port name] run ./hello.lua
+$ nodemcu-tool -p [device port name] upload ./hello.lua
+$ nodemcu-tool -p [device port name] run hello.lua
 # example device port name: /dev/ttyUSB0
 ```
+
+**BONUS**: for something more interesting try [Wi-Fi Detector](examples/wifi_detector) example.

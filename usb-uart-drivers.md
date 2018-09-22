@@ -21,7 +21,11 @@ then you will need a separate USB-UART converter, for instance like the one show
 
 ![USB-UART-CP2102](media/usb-uart-cp2102.jpg)
 
+Note: In this case there is a possibility that you get a module with yet another common USB-UART converter chip **_FT232RL_** manufactored by FTDI that will require yet another driver. Here is how it looks like. Notice that it has much more legs than the CH340G one:
+
+![USB-UART FT232RL](media/usb-uart-ft232rl.jpg)
+
 ## TODO
 
 - include a schema of an ESP-8266 module and a separate USB-UART connection
-- possible explain an option of using Arduino Uno as a USB-UART converter.
+- explain an option of using Arduino Uno as a USB-UART converter.

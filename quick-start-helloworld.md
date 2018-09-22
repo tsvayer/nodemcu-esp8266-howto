@@ -2,12 +2,12 @@
 
 If you don't want to understand how it actually works and just want to get to Hello World state as quick as possible then follow the steps below:
 
-- Install USB [Drivers](usb-uart-drivers.md)
-- Install [_nodemcu-tool_](nodemcu-tool.md) (assuming you know what is [Npm](https://www.npmjs.com/))
-- Install [_esptool_](esptool.md) (assuming you know what is [pip](https://pypi.org/project/pip/))
-- Download default firmware image from [nodemcu-build](https://nodemcu-build.com/)
-- Connect your ESP8266 module to development machine over USB
-- Find out where your device is connected
+1. Install USB [Drivers](usb-uart-drivers.md)
+1. Install [_nodemcu-tool_](nodemcu-tool.md) (assuming you know what is [Npm](https://www.npmjs.com/))
+1. Install [_esptool_](esptool.md) (assuming you know what is [pip](https://pypi.org/project/pip/))
+1. Download default firmware image from [nodemcu-build](https://nodemcu-build.com/)
+1. Connect your ESP8266 module to development machine over USB
+1. Find out where your device is connected
 
 ```bash
 nodemcu-tool devices
@@ -15,7 +15,7 @@ nodemcu-tool devices
 
 note port where your device is connected. Example: _/dev/ttyUSB0_
 
-- Flash your downloaded firmware image to the device
+1. Flash your downloaded firmware image to the device
 
 ```bash
 $ esptool.py --port [device port name] write_flash -fm dio 0x0000 [firmware image file]

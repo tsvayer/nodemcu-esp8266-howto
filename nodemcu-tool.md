@@ -38,6 +38,13 @@ $ nodemcu-tool devices
 
 Please note that if you are missing USB-UART converter driver nodemcu-tool will not be able to find your connected ESP8266 device. To learn more go to [Drivers](usb-uart-drivers.md) page.
 
+Alternatively, you can list your system devices and filter by _'usb'_ keyword like:
+
+```bash
+$ ls /dev/tty* | grep usb
+# /dev/tty.wchusbserial1410
+```
+
 ### File operations
 
 > TODO
@@ -48,14 +55,14 @@ Please note that if you are missing USB-UART converter driver nodemcu-tool will 
 
 ## LoLin modules from Wemos
 
-There is a special case for LoLin modules (D1, D1 mini, etc) from [Wemos](https://www.wemos.cc/) manufacturer. The problem is that device is restarted every time connection is established and we need to introduce a little delay to let device to startup when using nodemcu-tool. If you see that device is connected (using _devices_ command), but get the following error for file related operations
+There is a special case for LoLin modules (D1, D1 mini, etc) from [Wemos](https://www.wemos.cc/) manufacturer. The problem is that device is restarted every time connection is established and we need to introduce a little delay to let device to startup when using nodemcu-tool. If you see that device is connected (using `devices` command), but get the following error for file related operations
 
 ```bash
 # [NodeMCU-Tool]~ Unable to establish connection
 # [NodeMCU-Tool]~ No response detected - is NodeMCU online and the Lua interpreter ready ?
 ```
 
-you should include additional parameter _--connection-delay_
+you should include additional parameter `--connection-delay`
 
 ```bash
 nodemcu-tool fsinfo --port /dev/ttyUSB0 --connection-delay 100

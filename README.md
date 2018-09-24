@@ -14,11 +14,11 @@ For something more interesting try [Wi-Fi Detector](examples/wifi_detector)
 
 ## Main Tools
 
-- [nodemcu-tool](nodemcu-tool.md)
-- [esptool.py](esptool.md)
-- [docker-nodemcu-build](docker-nodemcu.md)
+- [nodemcu-tool](nodemcu-tool.md) - file management, code execution, serial terminal and LUA REPL
+- [esptool.py](esptool.md) - bootloader interaction, flashing firmware
+- [docker-nodemcu-build](docker-nodemcu.md) - Docker based firmware builder
 - [Lua](https://www.lua.org/) programming language
-- (optional) [nodemcu-build](https://nodemcu-build.com/)
+- (optional) [nodemcu-build](https://nodemcu-build.com/) - firmware builder in the clooud
 
 ### Related tools
 

@@ -45,13 +45,93 @@ $ ls /dev/tty* | grep usb
 # /dev/tty.wchusbserial1410
 ```
 
+### Open serial terminal
+
+```bash
+nodemcu-tool --port [device port] terminal
+```
+
+You should specify _device port_ that you got from the previous `devices` command. On successfull connection you should get something similar to:
+
+```bash
+powered by Lua 5.1.4 on SDK 2.2.1
+> _
+```
+
+At this point you are interacting with your ESP8266 device through LUA REPL. For instance, print some message:
+
+```lua
+> print('hello')
+# hello
+```
+
+or get an IP address (in case you have already connected your device to some access point):
+
+```lua
+> print(wifi.sta.getip())
+# 192.168.1.27 255.255.255.0 192.168.1.1
+```
+
+Please note, that in order to exit from a terminal you press ^C instead of ^D that we are used to on Linux/Unix.
+
+### Note: Environment configuration
+
+To communicate with your ESP8266 device you always need to specify which port it is connected to. For instance, in the previous `terminal` command we specified it through `--port` parameter. There are other parameters that you probably will specify for every command you run. It becomes tedious really quickly. There is an easier way:
+
+```bash
+nodemcu-tool init
+```
+
+it will ask you for the parameters once and save them in `.nodemcu` configuration file in a current directory. Next time you execute some nodemcu-tool command you can skip those common parameters.
+
+Note that by default, [--connection-delay](#lolin-modules-from-wemos) parameter is not saved. In case you need it, you can edit the configuration file manually:
+
+```json
+{
+  "connectionDelay": 100
+}
+```
+
 ### File operations
 
-> TODO
+Upload files to ESP8266 filesystem:
+
+```bash
+nodemcu-tool upload script.lua
+```
+
+Download files from ESP8266 filesystem:
+
+```bash
+nodemcu-tool download script.lua
+```
+
+Remove a file from ESP8266 filesystem:
+
+```bash
+nodemcu-tool remove script.lua
+```
+
+List files and get other file system related information:
+
+```bash
+nodemcu-tool fsinfo
+```
 
 ### Executing code
 
-> TODO
+To execute some LUA code on ESP8266 you first need to upload it. For instance, let's assume you have a `script.lua` code on your development machine. Then, to execute it you would run the following commands:
+
+```bash
+nodemcu-tool upload script.lua
+nodemcu-tool run script.lua
+```
+
+Another way to execute some code in a file stored on a device filesystem is through a serial [terminal](#open-serial-terminal). Assuming you have uploaded `script.lua` file and opened a terminal to your device, the following command will execute it:
+
+```lua
+> dofile('script.lua')
+```
 
 ## LoLin modules from Wemos
 

@@ -8,7 +8,7 @@ You should be familiar with the topics below:
 
 - [Build your own firmware](../../docker-nodemcu.md)
 - [Flash firmware](../../esptool.md)
-- [Run code on device](../../nodemcu-tool.md)
+- [Run code on device](../../nodemcu-tool.md#executing-code)
 
 ## Step 1 - develope your module
 

@@ -1,6 +1,6 @@
 # NodeMCU-tool
 
-NodeMCU-tool allows you to manage files (list, upload, download, delete) on an ESP8266 device. It also allows you to execute LUA code stored on a development machine directly on the ESP8266 device.
+NodeMCU-tool allows you to manage files (list, upload, download, delete) on an ESP8266 device. It also allows you to execute LUA code stored on an ESP8266 device.
 
 ## Installation
 

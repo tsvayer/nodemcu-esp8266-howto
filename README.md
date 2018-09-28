@@ -20,7 +20,6 @@ Not looking for easy ways? Write a [new module in C](examples/hello_world_c).
 - [esptool.py](esptool.md) - bootloader interaction, flashing firmware
 - [docker-nodemcu-build](docker-nodemcu.md) - Docker based firmware builder
 - [Lua](https://www.lua.org/) programming language
-- (optional) [nodemcu-build](https://nodemcu-build.com/) - firmware builder in the clooud
 
 ### Related tools
 

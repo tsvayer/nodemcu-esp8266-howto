@@ -6,7 +6,7 @@ Detailed technical information can be found at [esptool.py repository](https://g
 
 ## Installation
 
-You should have [Python](https://www.python.org/) and [pip](https://pypi.org/project/pip/) installed. I would advice to optionally create a [python environment](https://docs.python.org/3/tutorial/venv.html) instead of installing it system wide:
+You should have [Python](https://www.python.org/) and [pip](https://pypi.org/project/pip/) installed. I would advice to optionally create a [python virtual environment](https://docs.python.org/3/tutorial/venv.html) instead of installing it system wide:
 
 ```bash
 python -m venv esptool-env
